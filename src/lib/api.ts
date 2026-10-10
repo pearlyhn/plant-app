@@ -1,6 +1,6 @@
 import { CONFIG } from './config';
 
-export type Status = { moisture: number; temperature: number }; // moisture 0-100, temperature in C
+export type Status = { moisture: number; temperature: number | null }; // moisture 0-100, temperature in C
 
 // ---- Mock state so the app works before the hardware does ----
 let mockMoisture = 55;

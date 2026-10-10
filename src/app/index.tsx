@@ -131,7 +131,7 @@ export default function Dashboard() {
 
   const moisture = status?.moisture ?? 0;
   const state = moistureState(moisture);
-  const temp = status
+  const temp = status && status.temperature != null
     ? CONFIG.FAHRENHEIT
       ? `${Math.round((status.temperature * 9) / 5 + 32)}°`
       : `${status.temperature.toFixed(1)}°`
